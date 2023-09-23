@@ -8,10 +8,49 @@
 </head>
 <body>
     <div class="inputContainer">
-        <input type="number" class="horizontalInput">
-        <input type="number" class="verticalInput">
-        <button onclick="submit()" type="submit"></button>
-    </div>
+        <h1 class="title">Grid Generator</h1>
+        <div class="valueContainer">
+            <h3>Scale: </h3>
+            <h3 class="gridValue"></h3>
+            <h3>timeout: </h3>
+            <h3 class="speedValue">500</h3>
+        </div>
+        <div class="submitContainer">
+            <h2>scale</h2>
+            <input type="number" class="scaleInput" name="scale" min="2" max="256">
+            <button onclick="submit()" type="submit" value="submit">Generate!</button>        
+        </div>
+        <h2>Quick scale</h2>
+        <div class="quickSubmit">
+            <button onclick="quickSubmit(8)">8x</button>
+            <button onclick="quickSubmit(16)">16x</button>
+            <button onclick="quickSubmit(32)">32x</button>
+            <button onclick="quickSubmit(64)">64x</button>
+            <button onclick="quickSubmit(128)">128x</button>
+            <button onclick="quickSubmit(256)">256x</button>
+        </div>
+        <div class="timeoutContainer">
+            <h2>Timeout speed</h2>
+            <div class="timeoutContainer-container">
+                <p for="timeout">disable timeout</p>
+                <input type="checkbox" name="timeout" id="timeoutToggle">
+            </div>
+        </div>
+        <div class="quickTimeout">
+            <button onclick="timeout(500)">500</button>
+            <button onclick="timeout(1000)">1000</button>
+            <button onclick="timeout(2000)">2000</button>
+            <button onclick="timeout(4000)">4000</button>        
+        </div>
+        <h2>Color</h2>
+        <div class="colorPicker">
+            <button onclick="changeColor('red')">red</button>
+            <button onclick="changeColor('blue')">blue</button>
+            <button onclick="changeColor('green')">green</button>
+            <button onclick="changeColor('black')">black</button>
+            <button onclick="changeColor('white')">white</button>
+        </div>
+        </div>
     <div class="gridContainer"></div>
     <script src="javascript.js"></script>
 </body>
